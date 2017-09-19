@@ -6,11 +6,21 @@ output:
   beamer_presentation:
     includes:
       in_header: my_styles.tex
+    highlight: monochrome
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+## Introduction
+
+\begin{wideitemize}
+\item<1->  item 1
+\item<2-> item 2
+\item<3->  item 3
+\end{wideitemize}
+
 
 ## R Markdown
 
@@ -26,8 +36,15 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ## Slide with R Output
 
-```{r cars, echo = TRUE}
-summary(cars)
+```{r mtcars, echo=TRUE}
+dplyr::glimpse(mtcars)
+```
+
+## Slide with table
+
+```{r cars, results='asis'}
+print(xtable::xtable(head(iris), type = "latex", booktabs = TRUE, caption = "Sample Table"),
+      comment = FALSE)
 ```
 
 ## Slide with Plot
@@ -35,4 +52,3 @@ summary(cars)
 ```{r pressure}
 plot(pressure)
 ```
-

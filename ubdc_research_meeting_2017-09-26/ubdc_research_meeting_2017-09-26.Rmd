@@ -6,11 +6,54 @@ output:
   beamer_presentation:
     includes:
       in_header: my_styles.tex
+    highlight: monochrome
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+## Introduction
+
+\begin{wideitemize}
+\item<1-> Background on me
+\item<2-> Supervision team
+\item<3-> Funding
+\item<4-> Outline of talk
+\end{wideitemize}
+
+## Why/What is multimorbidity?
+
+\begin{figure}
+\centerline{\includegraphics[width=0.85\textwidth]{images/Prev_multi_morb.png}}
+\caption{Barnett et al.(2012). https://goo.gl/GXBofo}
+\end{figure}
+
+
+## Why/What is social care?
+
+image
+
+## Analysis
+
+\begin{wideitemize}
+\item Pilot project with data from Renfrewshire
+\item Main linkage project with national data
+\end{wideitemize}
+
+## Renfrewshire social care data
+
+Data on :- 
+
+\begin{wideitemize}
+\item Hours of Home care
+\item Other services e.g. shopping/laundry
+\item Client Group e.g. Dementia, Frail, Mental Health
+\item Care home admission/discharge
+\item Day care services
+\end{wideitemize}
+
+
 
 ## R Markdown
 
@@ -26,8 +69,15 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ## Slide with R Output
 
-```{r cars, echo = TRUE}
-summary(cars)
+```{r mtcars, echo=TRUE}
+dplyr::glimpse(mtcars)
+```
+
+## Slide with table
+
+```{r cars, results='asis'}
+print(xtable::xtable(head(iris), type = "latex", booktabs = TRUE, caption = "Sample Table"),
+      comment = FALSE)
 ```
 
 ## Slide with Plot
@@ -35,4 +85,3 @@ summary(cars)
 ```{r pressure}
 plot(pressure)
 ```
-

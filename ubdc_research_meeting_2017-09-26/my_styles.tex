@@ -12,7 +12,7 @@
 \institute{University of Glasgow}
 \setbeamertemplate{title page}[empty]
 
-\logo{\includegraphics[height=1.5cm]{ubdc_logo.png}}
+\logo{\includegraphics[height=1.5cm]{images/ubdc_logo.png}}
 
 \setbeamerfont{subtitle}{size=\small}
 
@@ -26,10 +26,19 @@
 \setbeamercolor{local structure}{fg=clemsonpurple}
 \setbeamercolor{section in toc}{fg=clemsonpurple,bg=white}
 % \setbeamercolor{subsection in toc}{fg=clemsonorange,bg=white}
+
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{20pt}}{\enditemize}
 \setbeamercolor{item projected}{fg=clemsonpurple,bg=white}
 \setbeamertemplate{itemize item}{\color{clemsonpurple}$\bullet$}
 \setbeamertemplate{itemize subitem}{\color{clemsonpurple}\scriptsize{$\bullet$}}
 \let\Tiny=\tiny
+
+\AtBeginPart{}
+\AtBeginSection{}
+\AtBeginSubsection{}
+\AtBeginSubsubsection{}
+\setlength{\emergencystretch}{0em}
+\setlength{\parskip}{0pt}
 
 \AtBeginPart{}
 \AtBeginSection{}
