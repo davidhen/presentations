@@ -1,8 +1,11 @@
 ---
-title: "Untitled"
+title: "Multimorbidity and Access to Social Care"
 author: "David Henderson"
-date: "19 September 2017"
-output: beamer_presentation
+date: "26 September 2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: my_styles.tex
 ---
 
 ```{r setup, include=FALSE}
