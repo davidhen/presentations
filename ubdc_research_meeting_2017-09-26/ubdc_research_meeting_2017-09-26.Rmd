@@ -32,7 +32,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Why/What is social care?
 
-image
+\begin{figure}
+\centerline{\includegraphics[width=0.85\textwidth]{images/home_care_only_plot-1.png}}
+\end{figure}
 
 ## Analysis
 
@@ -47,41 +49,36 @@ Data on :-
 
 \begin{wideitemize}
 \item Hours of Home care
+\item Community Alarm/Telecare
 \item Other services e.g. shopping/laundry
 \item Client Group e.g. Dementia, Frail, Mental Health
-\item Care home admission/discharge
 \item Day care services
 \end{wideitemize}
 
+##Main Linkage project
+
+\begin{figure}
+\centerline{\includegraphics[width=0.85\textwidth]{images/data_linakge.PNG}}
+\end{figure}
+
+##Acknowledgements
+
+- Supervision team
+- Dr Mirjam Allik
+- Amy Tilbrook
+- Ellen Lynch, Julie Rintoul
+
+##Links
+
+- Slides and code for Social Care Open Data Analysis:-<https://github.com/davidhen?tab=repositories>
 
 
-## R Markdown
+- Twitter: @daibhaidhhen
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- Website: coming soon....
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
-## Slide with Bullets
+## Questions
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
-## Slide with R Output
-
-```{r mtcars, echo=TRUE}
-dplyr::glimpse(mtcars)
-```
-
-## Slide with table
-
-```{r cars, results='asis'}
-print(xtable::xtable(head(iris), type = "latex", booktabs = TRUE, caption = "Sample Table"),
-      comment = FALSE)
-```
-
-## Slide with Plot
-
-```{r pressure}
-plot(pressure)
-```
+- Any questions?
