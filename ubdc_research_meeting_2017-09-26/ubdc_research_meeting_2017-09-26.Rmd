@@ -33,7 +33,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Why/What is social care?
 
 \begin{figure}
-\centerline{\includegraphics[width=0.85\textwidth]{images/home_care_only_plot-1.png}}
+\centerline{\includegraphics[width=0.5\textwidth]{images/home_care_only_plot-1.png}}
 \end{figure}
 
 ## Analysis
@@ -64,9 +64,10 @@ Data on :-
 ##Acknowledgements
 
 - Supervision team
-- Dr Mirjam Allik
-- Amy Tilbrook
-- Ellen Lynch, Julie Rintoul
+- Dr Mirjam Allik - UBDC
+- Amy Tilbrook - eDRIS NSS
+- Danny McAllion - Renfrewshire Council
+- Ellen Lynch, Julie Rintoul - ASD Scottish Government
 
 ##Links
 
