@@ -1,0 +1,131 @@
+---
+title: "Multimorbidity and Access to Social Care"
+subtitle: "Exploiting emerging adminsitrative datasets in Scotland"
+author: "David Henderson"
+date: "3rd April 2018"
+output:
+  beamer_presentation:
+    includes:
+      in_header: my_styles.tex
+    highlight: monochrome
+bibliography: gppc.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+\begin{wideitemize}
+\item  Personal Background
+\item  Project funding and supervision
+\item  Project outline
+\item  Progress
+\end{wideitemize}
+
+
+## Personal Background
+
+\begin{figure}
+\centerline{\includegraphics[width=0.85\textwidth, height=0.85\textheight]{images/stressful.jpg}}
+\end{figure}
+
+
+##
+
+\begin{figure}
+\centerline{\includegraphics[width=0.80\textwidth, height=0.80\textheight]{images/phd.png}}
+\end{figure}
+
+<http://www.thedailymash.co.uk/news/science-technology/people-doing-phds-admit-its-just-an-excuse-to-fanny-about-20170926136446>
+
+## Project funding and supervision
+
+\begin{wideitemize}
+\item<1-> Scottish Government
+\item<2-> ESRC
+\item<3-> UBDC
+\item<4-> Nick Bailey, Colin McCowan, Stewart Mercer
+\end{wideitemize}
+
+## Project outline
+
+###Background (a) Multimorbidity
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/Prev_multi_morb.png}}
+\end{figure}
+
+Barnett et al [-@RN33]
+
+##Project outline
+###Background (b) Social Care
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/3MT_plot.png}}
+\end{figure}
+
+[code](https://github.com/davidhen/social_care_open_data/blob/master/rmds/3MT_plot.Rmd)
+
+##Project outline
+### Aims
+
+\begin{itemize}
+\item<1-> Describe and and compare social inequalities in the use of social care services using linked health and social care data. 
+\item<2-> Explore the effects of social care use for those with multimorbidity on;
+\begin{itemize}
+\item unscheduled health care use
+\item mortality
+\end{itemize}
+\item<3-> Assess how measures of multimorbidity and health \& social care service use can be operationalised using existing linked health \& social care administrative data
+\end{itemize}
+
+##Project outline
+###Research questions:
+
+In people over the age of 65 in Scotland:  
+
+\begin{enumerate}
+\item
+\begin{enumerate}[(a)]
+\item What are the socioeconomic, demographic, and geographic patterns in the use of social care? 
+\item Is there an association between multimorbidity status and the amount and type of social care use over time? Does this vary by the patterns described in 1(a)?  
+\end{enumerate}
+\item 
+\begin{enumerate}[(a)]
+\item Is there an association in the use of social care services, multimorbidity status and unscheduled health care use?
+\item Do multimorbidity status and social care use predict mortality?
+\end{enumerate}
+\end{enumerate}
+
+##Project outline
+###Data sources
+\begin{itemize}
+\item<1-> Demographics, Deaths, and SIMD (CHI database and NSS)
+\item<1-> Social care survey (Scottish Government)
+\item<1-> Prescribing information (ISD)
+\item<1->  Unscheduled Care Data Mart (ISD)
+\end{itemize}
+###Study period
+\begin{itemize}
+\item<2-> 1st April 2011 to 31st March 2016
+\end{itemize}
+###Cohort
+\begin{itemize}
+\item<3-> Everyone born before 31st March 1951 (over 65s)
+\end{itemize}
+
+##Project outline
+###Data Linkage
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth, height=0.7\textheight]{images/linkage.png}}
+\end{figure}
+
+##Project outline
+###Cohort numbers
+
+\begin{itemize}
+\item 
+
+##References

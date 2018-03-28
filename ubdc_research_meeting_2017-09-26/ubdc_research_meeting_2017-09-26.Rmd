@@ -1,7 +1,7 @@
 ---
 title: "Multimorbidity and Access to Social Care"
 author: "David Henderson"
-date: "26 September 2017"
+date: "21st March 2018"
 output:
   beamer_presentation:
     includes:
@@ -16,67 +16,35 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Introduction
 
 \begin{wideitemize}
-\item<1-> Background on me
-\item<2-> Supervision team
-\item<3-> Funding
-\item<4-> Outline of talk
+\item Quick update since September
+\item Background
+\item Renfrewshire council data preliminary thoughts
+\item What's next?
 \end{wideitemize}
 
-## Why/What is multimorbidity?
+## Three-minute-thesis
 
 \begin{figure}
-\centerline{\includegraphics[width=0.85\textwidth]{images/Prev_multi_morb.png}}
-\caption{Barnett et al.(2012). https://goo.gl/GXBofo}
+\centerline{\includegraphics[width=0.85\textwidth]{images/3MT_plot.png}}
 \end{figure}
 
 
-## Why/What is social care?
-
-\begin{figure}
-\centerline{\includegraphics[width=0.5\textwidth]{images/home_care_only_plot-1.png}}
-\end{figure}
-
-## Analysis
+## Renfrewshire Analysis
 
 \begin{wideitemize}
-\item Pilot project with data from Renfrewshire
-\item Main linkage project with national data
+\item Validate Social Care Survey
+\item 10 years of (continual) social care data
+\item SCS captures approx 60\% of individuals receiving care
+\item Hours of home care delivered accurate for about 50\% of individuals
+\item Small amounts of variation for majority of remainder
 \end{wideitemize}
 
-## Renfrewshire social care data
-
-Data on :- 
+## What's next?
 
 \begin{wideitemize}
-\item Hours of Home care
-\item Community Alarm/Telecare
-\item Other services e.g. shopping/laundry
-\item Client Group e.g. Dementia, Frail, Mental Health
-\item Day care services
+\item Main project
+\item Analysis underway
 \end{wideitemize}
-
-##Main Linkage project
-
-\begin{figure}
-\centerline{\includegraphics[width=0.85\textwidth]{images/data_linakge.PNG}}
-\end{figure}
-
-##Acknowledgements
-
-- Supervision team
-- Dr Mirjam Allik - UBDC
-- Amy Tilbrook - eDRIS NSS
-- Danny McAllion - Renfrewshire Council
-- Ellen Lynch, Julie Rintoul - ASD Scottish Government
-
-##Links
-
-- Slides and code for Social Care Open Data Analysis:-<https://github.com/davidhen?tab=repositories>
-
-
-- Twitter: @daibhaidhhen
-
-- Website: coming soon....
 
 
 ## Questions
