@@ -1,0 +1,43 @@
+---
+title: "Multimorbidity and Access to Social Care"
+subtitle: "Exploiting emerging adminsitrative datasets in Scotland"
+author: "David Henderson"
+date: "3rd April 2018"
+output: 
+  ioslides_presentation:
+    logo: ubdc_logo.png
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+- Personal Background
+- Project funding and supervision
+- Project outline
+- Progress
+
+## Personal Background
+
+![](images/stressful.jpg)
+
+## {.smaller}
+
+![](images/phd.PNG)
+
+[link to story]<http://www.thedailymash.co.uk/news/science-technology/people-doing-phds-admit-its-just-an-excuse-to-fanny-about-20170926136446>
+
+##Project funding and supervision
+
+> - Scottish Government
+> - ESRC
+> - UBDC
+> - Nick Bailey, Colin McCowan, Stewart Mercer
+
+##Project outline
+### Background (a) Multimorbidity
+
+![Barnett et al (2012)](images/Prev_multi_morb.png)

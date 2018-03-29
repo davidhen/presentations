@@ -7,8 +7,7 @@ output:
   beamer_presentation:
     includes:
       in_header: my_styles.tex
-    highlight: monochrome
-bibliography: gppc.bib
+    highlight: tango
 ---
 
 ```{r setup, include=FALSE}
@@ -57,33 +56,26 @@ knitr::opts_chunk$set(echo = FALSE)
 \centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/Prev_multi_morb.png}}
 \end{figure}
 
-Barnett et al [-@RN33]
+Barnett et al (2012)
 
 ##Project outline
 ###Background (b) What we know..
 
 \begin{itemize}
-\item<1-> There is a strong socioeconomic gradient observed for those with multimorbidity
-\item<1-> This feeds the inverse care law in primary care services 
-\end{itemize}
-
-MM associated with...
-\begin{itemize}
-\item<2-> Higher mortality
-\item<2-> Psychological distress
-\item<2-> Worse QOL
-\item<2-> Worse functional status
-\item<2-> Increased health care use...
-\end{itemize}
-
-\begin{itemize}
+\item<1-> There is a strong socioeconomic gradient observed for those with multimorbidity which feeds the inverse care law in primary care services.
+\item<2-> MM associated with higher mortality, psychological distress, worse QOL, worse functional status, and increased health care use.
 \item<3-> But what about social care?????
 \end{itemize}
 
+##Project outline
+###Background (c) Social care and multimorbidity
 
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/NICE.png}}
+\end{figure}
 
 ##Project outline
-###Background (c) Social Care
+###Background (d) Social Care
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/3MT_plot.png}}
@@ -141,6 +133,21 @@ In people over the age of 65 in Scotland:
 \end{itemize}
 
 ##Project outline
+
+```{r tribble}
+library(tibble)
+
+table <- tribble(~"", ~"n", ~"Total number of records",
+                 "Total Cohort", "1,134,445", "",
+                 "Total Deaths", "274,011", "",
+                 "At least one prescription", "1,109,168", "134 million",
+                 "Captured by social care survey", "227,345", "663,809",
+                 "At least one episode USC", "845,893", "3,772,402")
+knitr::kable(table)
+```
+
+
+##Project outline
 ###Measures
 \begin{enumerate}
 \item<1-> Multimorbidity
@@ -164,33 +171,12 @@ In people over the age of 65 in Scotland:
 \end{enumerate}
 
 
-##Project outline
+##Progress
 ###Weekly variation in number of individuals receiving home care in Renfrewshire council area
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth, height=0.7\textheight]{images/renfrew.png}}
 \end{figure}
-
-
-##Project outline
-###Data Linkage
-\begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth, height=0.7\textheight]{images/linkage.png}}
-\end{figure}
-
-##Project outline
-
-```{r tribble}
-library(tibble)
-
-table <- tribble(~"", ~"n", ~"Total number of records",
-                 "Total Cohort", "1,134,445", "",
-                 "Total Deaths", "274,011", "",
-                 "At least one prescription", "1,109,168", "134 million",
-                 "Captured by social care survey", "227,345", "663,809",
-                 "At least one episode USC", "845,893", "3,772,402")
-knitr::kable(table)
-```
 
 ##Progress
 
@@ -285,4 +271,3 @@ rm(list = c("data", "p1", "timeline", "vjust", "shift_axis", "table", "cond_colo
 \end{figure}
 
 
-##References
