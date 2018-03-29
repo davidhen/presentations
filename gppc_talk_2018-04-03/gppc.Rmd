@@ -60,13 +60,36 @@ knitr::opts_chunk$set(echo = FALSE)
 Barnett et al [-@RN33]
 
 ##Project outline
-###Background (b) Social Care
+###Background (b) What we know..
+
+\begin{itemize}
+\item<1-> There is a strong socioeconomic gradient observed for those with multimorbidity
+\item<1-> This feeds the inverse care law in primary care services 
+\end{itemize}
+
+MM associated with...
+\begin{itemize}
+\item<2-> Higher mortality
+\item<2-> Psychological distress
+\item<2-> Worse QOL
+\item<2-> Worse functional status
+\item<2-> Increased health care use...
+\end{itemize}
+
+\begin{itemize}
+\item<3-> But what about social care?????
+\end{itemize}
+
+
+
+##Project outline
+###Background (c) Social Care
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/3MT_plot.png}}
 \end{figure}
 
-[code](https://github.com/davidhen/social_care_open_data/blob/master/rmds/3MT_plot.Rmd)
+\faGithub\href{https://github.com/davidhen/social_care_open_data/blob/master/rmds/3MT_plot.Rmd}{ link to code}
 
 ##Project outline
 ### Aims
@@ -78,7 +101,7 @@ Barnett et al [-@RN33]
 \item unscheduled health care use
 \item mortality
 \end{itemize}
-\item<3-> Assess how measures of multimorbidity and health \& social care service use can be operationalised by linking existing health \& social care administrative data
+\item<3-> Assess the validity of existing administrative data on social care for research purposes. 
 \end{itemize}
 
 ##Project outline
@@ -123,7 +146,7 @@ In people over the age of 65 in Scotland:
 \item<1-> Multimorbidity
 \begin{enumerate}[(a)]
 \item Count of regular medicines
-\item Count of prescibing from BNF chapters
+\item Count of prescribing from BNF chapters
 \item Cross reference with diagnoses data
 \end{enumerate}
 \item<2-> Social Care
@@ -183,21 +206,21 @@ library(lubridate)
 #Create data to plot
 data <- tribble( ~start_date, ~event, ~displ,
                 ymd(20151001), "PhD Starts", 0.4,
-                ymd(20160201), "Initial meeting with Renfrewshire", -0.7,
+                ymd(20160201), "Initial meeting with Renfrewshire", 1,
                 ymd(20160524), "Ethical Approval", 0.5,
-                ymd(20160712), "RAC approval", -0.5,
-                ymd(20170208), "Ethical approval",-0.5,
-                ymd(20170210), "RAC approval", 0.3,
-                ymd(20170906), "DSA signed", 0.3,
-                ymd(20170921), "Data transferred", -0.5,
-                ymd(20180227), "Analysis complete", 0.5,
-                ymd(20161118), "RAC submission", 0.6,
-                ymd(20170404), "PBPP submission", -0.3,
-                ymd(20170505), "PBPP approval", 0.2,
+                ymd(20160712), "RAC approval", 0.3,
+                ymd(20170208), "Ethical approval",-0.9,
+                ymd(20170210), "RAC approval", -0.7,
+                ymd(20170906), "DSA signed", 0.5,
+                ymd(20170921), "Data transferred", 0.3,
+                ymd(20180227), "Analysis complete", 0.3,
+                ymd(20161118), "RAC submission", -1.1,
+                ymd(20170404), "PBPP submission", -0.5,
+                ymd(20170505), "PBPP approval", -0.3,
                 ymd(20160429), "RAC submission", 0.7,
-                ymd(20171122), "Health data available", 0.7,
-                ymd(20171213), "DSA signed", -0.3,
-                ymd(20180221), "SCS available", -0.2)
+                ymd(20171122), "Health data available", -0.9,
+                ymd(20171213), "DSA signed", -0.7,
+                ymd(20180221), "SCS available", -0.3)
 
 
 #Function to shift x-axis to 0 taken from https://stackoverflow.com/questions/39071002/moving-x-or-y-axis-together-with-tick-labels-to-the-middle-of-a-single-ggplot-n
@@ -247,8 +270,8 @@ p1 <- data %>%
 #and run the function from above
 timeline <- shift_axis(p1, ymd(20151001), ymd(20181001))
 timeline <- timeline + 
-  annotate("text", x = ymd(20151001), y =  1, label = "Pilot Project", colour = "red") +
-  annotate("text", x = ymd(20151001), y = 0.9,   label = "Main Project", colour = "blue")
+  annotate("text", x = ymd(20160201), y = -0.6, label = "Pilot Project", colour = "red") +
+  annotate("text", x = ymd(20160201), y = -0.7,   label = "Main Project", colour = "blue")
 timeline + labs(caption = "RAC = Research Approvals Committee\nPBPP = Public Benefit and Privacy Panel\nDSA = Data Sharing Agreement") +
   theme(plot.caption = element_text(size = 8))
 
