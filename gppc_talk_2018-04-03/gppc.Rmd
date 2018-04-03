@@ -67,6 +67,13 @@ Barnett et al (2012)
 \item<3-> But what about social care?????
 \end{itemize}
 
+##Project outline
+###Background (c) Social care and multimorbidity
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/NICE.png}}
+\end{figure}
+
 ##
 \begin{figure}
 \centerline{\includegraphics{images/Condelius.PNG}}
@@ -78,12 +85,6 @@ Barnett et al (2012)
 \centerline{\includegraphics{images/porter.png}}
 \end{figure}
 
-##Project outline
-###Background (c) Social care and multimorbidity
-
-\begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/NICE.png}}
-\end{figure}
 
 ##Project outline
 ###Background (d) Social Care
@@ -195,7 +196,8 @@ knitr::kable(table)
 library(ggplot2)
 library(dplyr)
 library(ggalt)
-library(cowplot)
+library(ggthemr)
+ggthemr("flat", "clean")
 library(tibble)
 library(lubridate)
 
@@ -261,15 +263,17 @@ p1 <- data %>%
         axis.ticks.y = element_blank(),
         axis.line = element_blank(),
         axis.text.x = element_text(size = 7)) +
-  expand_limits(x = c(ymd(20151201), ymd(20181001)), y = c(1.2, -0.6)) +
+  expand_limits(x = c(ymd(20151201), ymd(20181001)), y = c(1.2, -1.2)) +
   scale_x_date(breaks = scales::pretty_breaks(n = 12))
 
 #and run the function from above
 timeline <- shift_axis(p1, ymd(20151001), ymd(20181001))
 timeline <- timeline + 
   annotate("text", x = ymd(20160201), y = -0.6, label = "Pilot Project", colour = "red") +
-  annotate("text", x = ymd(20160201), y = -0.7,   label = "Main Project", colour = "blue")
-timeline + labs(caption = "RAC = Research Approvals Committee\nPBPP = Public Benefit and Privacy Panel\nDSA = Data Sharing Agreement") +
+  annotate("text", x = ymd(20160201), y = -0.8,   label = "Main Project", colour = "blue")
+timeline + labs(title = "PhD Timeline",
+                subtitle = "Multimorbidity and access to social care",
+                caption = "RAC = Research Approvals Committee\nPBPP = Public Benefit and Privacy Panel\nDSA = Data Sharing Agreement") +
   theme(plot.caption = element_text(size = 8))
 
 rm(list = c("data", "p1", "timeline", "vjust", "shift_axis", "table", "cond_colour"))
