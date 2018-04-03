@@ -67,6 +67,17 @@ Barnett et al (2012)
 \item<3-> But what about social care?????
 \end{itemize}
 
+##
+\begin{figure}
+\centerline{\includegraphics{images/Condelius.PNG}}
+\end{figure}
+
+##
+
+\begin{figure}
+\centerline{\includegraphics{images/porter.png}}
+\end{figure}
+
 ##Project outline
 ###Background (c) Social care and multimorbidity
 
