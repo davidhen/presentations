@@ -67,6 +67,18 @@ Barnett et al (2012)
 \item<3-> But what about social care?????
 \end{itemize}
 
+##Project outline (c) Social Care
+
+>"Social care supports people of all ages with certain physical, cognitive or age-related conditions in carrying out personal care or domestic routines. It helps people to sustain employment in paid or unpaid work, education, learning, leisure and other social support systems. It supports people in building social relationships and participating fully in society." [^1]
+
+Definitional split:-   
+
+* Home Care
+* Care Home
+* Nursing Home
+
+[^1]: Commission on Funding of Care and Support. (2011) Fairer Care Funding: The Report of the Commission on Funding of Care and Support.
+
 ##Project outline
 ###Background (c) Social care and multimorbidity
 
