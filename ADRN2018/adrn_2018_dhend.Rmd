@@ -1,0 +1,136 @@
+---
+title: "Validation of the Scottish Social Care Survey"
+subtitle: "using Data from Renfrewshire Council"
+author: "David Henderson"
+date: "22nd June 2018"
+output:
+  beamer_presentation:
+    includes:
+      in_header: my_styles.tex
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.path = "images/")
+```
+
+## Background
+
+\begin{wideitemize}
+\item  Validation to inform main thesis project
+\item  Social Care Survey (SCS) newly available for data linkage
+\item  Cross-sectional
+\item  Continuous data from Renfrewshire council 
+\end{wideitemize}
+
+## Questions
+
+\begin{itemize}
+\item What percentage of the total number of indivudals receiving care in each finanacial year is captured by SCS?
+\item Are there demographic differences in those that are/are not captured by the census?
+\item Are there differences in the intensity and duration of care received by those that are/are not captured by the census?
+\item For those individuals that \textbf{\textit{are}} captured by the census, is the amount of care they receive in the census week representative of the care received throuought the year?
+\end{itemize}
+
+## Methods
+
+\begin{wideitemize}
+\item Summarise data into \textbf{\textit{packages}} of care. 
+\item Descriptive stats
+\item Time series
+\end{wideitemize}
+
+##Results
+
+###Percentage of individuals captured by the census
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/06-indivdual-weekly-variation.png}
+\end{figure}
+
+## Results
+
+### Demographic differences in individuals captured by census
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{images/table-prop-age-plot.png}
+\end{figure}
+
+##Results
+
+### Differences in package type captured by the census
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/08_census-prop-plot.png}
+\end{figure}
+
+##Results
+
+### Differences in intensity of packages for individuals captured by the census
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/10_inten.png}
+\end{figure}
+
+##Results
+
+###Differences in intensity of packages for individuals captured by the census, by care type
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/12_type-inten.png}
+\end{figure}
+
+##Results
+
+### Differences in duration of packages for individuals captured by the census
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/16-duration.png}
+\end{figure}
+
+##Results
+
+### Differences in duration of packages for individuals captured by the census, by care type
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/18-dur-type-plot.png}
+\end{figure}
+
+##Results
+
+### Variation in amount of care received by indiviudals captured by the census
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/10-net-diff-plot.png}
+\end{figure}
+
+##Limitations
+
+\begin{wideitemize}
+\item Data from one council area only
+\item Methods of summarising may be different from those calculated by Renfrewshire
+\item Did not account for SEP
+\end{wideitemize}
+
+##Conclusion
+
+\begin{itemize}
+\item SCS captured between 51\% and 61\% of all indiviudals receving home care 2006-2016
+\item Decreasing trend driven by increase in use of "Reablement" type packages
+\item This phenomenon not captured by older versions of SCS
+\item Individuals that are not identified by the census have marginally higher intensities of care and much shorter total duration of care. 
+\item This is seen more obviously in non-"Mainstream" type packages
+\item Why is this important for SCS
+\end{itemize}
+
+
+##Questions
+ figure
+
+
+
+
+
+
+
+
