@@ -26,10 +26,10 @@ knitr::opts_chunk$set(echo = FALSE, fig.path = "images/")
 ## Questions
 
 \begin{itemize}
-\item What percentage of the total number of indivudals receiving care in each finanacial year is captured by SCS?
-\item Are there demographic differences in those that are/are not captured by the census?
-\item Are there differences in the intensity and duration of care received by those that are/are not captured by the census?
-\item For those individuals that \textbf{\textit{are}} captured by the census, is the amount of care they receive in the census week representative of the care received throuought the year?
+\item<1-> What percentage of the total number of individuals receiving care in each financial year is captured by SCS?
+\item<2-> Are there demographic differences in those that are/are not captured by the census?
+\item<3-> Are there differences in the intensity and duration of care received by those that are/are not captured by the census?
+\item<4-> For those individuals that \textbf{\textit{are}} captured by the census, is the amount of care they receive in the census week representative of the care received throughout the year?
 \end{itemize}
 
 ## Methods
@@ -101,7 +101,7 @@ Packages of non-zero hours of care & 28,775             \\ \bottomrule
 ###Number of individuals captured by the census
 
 \begin{figure}
-\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/06-indivdual-weekly-variation.png}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/06-individual-weekly-variation.png}
 \end{figure}
 
 
@@ -186,23 +186,33 @@ Packages of non-zero hours of care & 28,775             \\ \bottomrule
 \item Data from one council area only
 \item Methods of summarising may be different from those calculated by Renfrewshire
 \item Did not account for SEP
+\item No longitudinal analysis
 \end{wideitemize}
 
-##Conclusion
+##Summary
 
 \begin{itemize}
-\item SCS captured between 51\% and 61\% of all indiviudals receving home care 2006-2016
-\item Decreasing trend driven by increase in use of "Reablement" type packages
-\item This phenomenon not captured by older versions of SCS
-\item Individuals that are not identified by the census have marginally higher intensities of care and much shorter total duration of care. 
-\item This is seen more obviously in non-"Mainstream" type packages
-\item Why is this important for SCS
+\item<1-> SCS captured approximately 60\% of all individuals receiving home care 2010-2015
+\item<2-> Increase in reablement type care over time - not captured by older versions of SCS
+\item<3-> No major demographic differences between those in/not in the census
+\item<4-> Individuals that are not identified by the census have marginally higher intensities of care and much shorter total duration of care. 
+\item<5-> This is seen more obviously in non-"Mainstream" type packages
 \end{itemize}
 
+##Implications
+
+\begin{itemize}
+\item<1-> The Social Care \emph{Survey} provides a good sample of those receiving home care in each financial year (in the Renfrewshire council area)...
+\item<2-> ...but it is cross-sectional
+\item<3-> Individuals \textbf{not} in the census are short-term care users.
+\item<4-> The weekly hours of home care reported in the census is a fairly accurate representation of care throughout the year
+\end{itemize}
 
 ##Questions
- figure
 
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth, height=0.7\textheight, keepaspectratio]{images/questions.png}}
+\end{figure}
 
 
 
