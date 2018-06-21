@@ -38,15 +38,91 @@ knitr::opts_chunk$set(echo = FALSE, fig.path = "images/")
 \item Summarise data into \textbf{\textit{packages}} of care. 
 \item Descriptive stats
 \item Time series
+\item \emph{Interim} results
 \end{wideitemize}
+
+##Results
+
+###Descriptives (1)
+
+\begin{table}[]
+\centering
+\caption{Number of records at each stage of data cleaning}
+\label{tab:renf-cleaning}
+\begin{threeparttable}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Data Cleaning stage                & Number of records \\ \midrule
+Initial home care file             & 106,111           \\
+Including over 65s only            & 92,723             \\
+Summarised to packages of care     & 41,002\tnote{1}    \\ 
+Packages of non-zero hours of care & 28,775             \\ \bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[1] Total number of individuals = 10,310
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+##Results
+
+###Descriptives (2)
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/01-age-gender-ts-subset}
+\end{figure}
+
+##Results
+
+###Descriptives (3)
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/03-pack-plot}
+\end{figure}
+
+##Results
+
+###Descriptives (4)
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/04-hrs-plot-ts-subset}
+\end{figure}
+
+##Results
+
+###Descriptives (5)
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/05-duration-plot}
+\end{figure}
+
+##Results
+
+###Number of individuals captured by the census
+
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/06-indivdual-weekly-variation.png}
+\end{figure}
+
 
 ##Results
 
 ###Percentage of individuals captured by the census
 
-\begin{figure}
-\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{images/06-indivdual-weekly-variation.png}
-\end{figure}
+\begin{table}[]
+\centering
+\caption{Count of individuals with packages captured by census}
+\label{tab:renf-cens-indi-count}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Financial Year} & \textbf{\begin{tabular}[c]{@{}r@{}}Individuals with zero\\ packages captured by \\ census (n)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}r@{}}Individuals with at\\ least one package \\ captured by census (n)\end{tabular}} \\ \midrule
+\textbf{2010/11} & 864 (40.3\%) & 1279 (59.7\%) \\
+\textbf{2011/12} & 797 (38.2\%) & 1289 (61.8\%) \\
+\textbf{2012/13} & 945 (39.8\%) & 1430 (60.2\%) \\
+\textbf{2013/14} & 1080 (41.7\%) & 1513 (58.3\%) \\
+\textbf{2014/15} & 1138 (41.4\%) & 1614 (58.6\%) \\ \bottomrule
+\end{tabular}
+\end{table}
 
 ## Results
 
