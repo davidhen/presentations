@@ -1,0 +1,193 @@
+---
+title: "Multimorbidity and Access to Social Care"
+subtitle: "Exploiting emerging adminsitrative datasets in Scotland"
+author: "David Henderson"
+date: "13th September 2018"
+output:
+  beamer_presentation:
+    includes:
+      in_header: my_styles.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Project funding and supervision
+
+\vspace{1cm}
+
+\begin{wideitemize}
+\item Scottish Government
+\item ESRC
+\item UBDC
+\item Nick Bailey, Colin McCowan, Stewart Mercer
+\end{wideitemize}
+
+\hspace*{8cm}\includegraphics[width = 2cm]{images/ubdc_logo.png}
+
+## Project outline
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight]{images/Prev_multi_morb.png}}
+\end{figure}
+
+Barnett et al (2012)
+
+##Project outline
+
+
+\includegraphics[width=0.8\textwidth, height=0.8\textheight]{images/icl_pc.png}
+
+##Project outline
+
+\includegraphics[width=0.8\textwidth, height=0.8\textheight]{images/anycare_map.png}
+
+##Project outline
+
+
+In people over the age of 65 in Scotland:  
+
+\begin{enumerate}
+\item
+\begin{enumerate}[(a)]
+\item What are the socioeconomic, demographic, and geographic patterns in the use of social care? 
+\item Is there an association between multimorbidity status and the amount and type of social care use over time? Does this vary by the patterns described in 1(a)?  
+\end{enumerate}
+\item 
+\begin{enumerate}[(a)]
+\item Is there an association in the use of social care services, multimorbidity status and unscheduled health care use?
+\item Do multimorbidity status and social care use predict mortality?
+\end{enumerate}
+\end{enumerate}
+
+##Project outline
+
+###Study period 2011-2016
+
+\includegraphics[width=0.8\textwidth]{images/linkage.png}
+
+
+##Results
+
+
+```{r cohort, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+`%nin%` <- negate(`%in%`)
+
+read_csv("tab_1.csv") %>% 
+  select(measure, all_years) %>% 
+  mutate(all_years = sub("\\(.*","", .$all_years),
+         all_years = as.integer(all_years)) %>% 
+  mutate(pct = round(all_years/1104226 * 100,1)) -> cohort
+
+x_labels <- c("Total (n)", "Female", "Male")
+
+cohort %>% 
+  filter(measure %in% c("n", "n_male", "n_female")) %>%
+  ggplot(aes(reorder(measure, all_years), all_years)) +
+  geom_col(fill = "#4477AA") +
+  geom_text(aes(label=paste0(pct,"%")), size=4, hjust = -0.3, vjust = -0.2) +
+  scale_x_discrete(labels = rev(x_labels)) +
+  scale_y_continuous(limits = c(0, 1200000), 
+                     breaks = scales::pretty_breaks()) +
+  coord_flip() +
+  theme_minimal(base_size = 16) +
+  labs(title = "Count of individuals in cohort (1)",
+       x = "",
+       y = "") 
+
+```
+
+
+##Results
+
+```{r plot_2}
+
+
+x_labels <- c("Total (n)", "Aged 65-75", "Aged 76-85", "Aged 86+")
+
+cohort %>% 
+  filter(measure %in% c("n", "n_6575", 
+                         "n_7685", "n_86plus")) %>%
+  ggplot(aes(reorder(measure, all_years), all_years)) +
+  geom_col(fill = "#4477AA") +
+  geom_text(aes(label=paste0(pct,"%")), size=4, hjust = -0.3, vjust = -0.2) +
+  scale_x_discrete(labels = rev(x_labels)) +
+  scale_y_continuous(limits = c(0, 1200000), 
+                     breaks = scales::pretty_breaks()) +
+  coord_flip() +
+  theme_minimal(base_size = 16) +
+  labs(title = "Count of individuals in cohort (2)",
+       x = "",
+       y = "") 
+```
+
+
+##Results
+
+```{r plot_3}
+x_labels = c("Total (n)", "At least one\nprescription", "At lease one\nUSC episode",
+           "At least one\nA & E attendance", "At least one\nunplanned admission",
+           "Appeared in SCS", "Died")
+
+cohort %>% 
+  filter(measure %nin% c("n_male", "n_female", "n_6575", 
+                         "n_7685", "n_86plus")) %>%
+  ggplot(aes(reorder(measure, all_years), all_years)) +
+  geom_col(fill = "#4477AA") +
+  geom_text(aes(label=paste0(pct,"%")), size=4, hjust = -0.3, vjust = -0.2) +
+  scale_x_discrete(labels = rev(x_labels)) +
+  scale_y_continuous(limits = c(0, 1200000), 
+                     breaks = scales::pretty_breaks()) +
+  coord_flip() +
+  theme_minimal(base_size = 16) +
+  labs(title = "Count of individuals in cohort (3)",
+       x = "",
+       y = "") 
+```
+
+##Results
+
+\includegraphics[width=0.95\textwidth]{images/plot_agesimd-1.png}
+
+
+##Results
+
+\includegraphics[width=0.95\textwidth]{images/plot_simd-1.png}
+
+##Results
+
+\includegraphics[width=0.95\textwidth]{images/episode_count-1.png}
+
+
+##Summary
+
+\begin{wideitemize}
+\item Linkage of health and social care datasets is possible in Scotland
+\item Lots still to be done in terms of quality
+\item Preliminary results suggest there is \emph{not} an inverse social care law
+\item Impact of Multimorbidity on social care and both of these on unscheduled care use still to be analysed
+\item Watch this space....
+\end{wideitemize}
+
+##Acknowledgements
+
+\begin{wideitemize}
+\item Scottish Government and NHS National Services Scotland
+\item UBDC and eDRIS for secure data management
+\item Amy Tilbrook
+\end{wideitemize}
+
+##Thank you
+
+\begin{wideitemize}
+\item www.davidhen.com 
+\item www.github.com/davidhen \faGithub
+\item www.ubdc.ac.uk
+\item @\_davidhen \faTwitter
+\end{wideitemize}
+
+\hspace*{8cm}\includegraphics[width = 2cm]{images/ubdc_logo.png}
+
