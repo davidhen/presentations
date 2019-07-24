@@ -1,0 +1,137 @@
+---
+title: "Modelling social care receipt using linked administrative data"
+subtitle: "A presentation at interview for Post-Doctoral Research Fellow"
+author: "David Henderson"
+date: "22nd January 2019"
+output:
+  beamer_presentation:
+    includes:
+      in_header: my_styles.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Project funding and supervision
+
+\vspace{1cm}
+
+\begin{wideitemize}
+\item Scottish Government/ESRC
+\item Nick Bailey, Colin McCowan, Stewart Mercer
+\end{wideitemize}
+
+\hspace*{8cm}\includegraphics[width = 2cm]{images/ubdc_logo.png}
+
+## Background
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth, height=0.6\textheight, keepaspectratio]{images/Prev_multi_morb.png}}
+\end{figure}
+
+Barnett et al (2012)
+
+## Background
+
+\includegraphics[width=0.8\textwidth, height=0.8\textheight, keepaspectratio]{images/anycare_map.png}
+
+## Research Questions
+
+
+In people over the age of 65 in Scotland:  
+
+\begin{enumerate}
+\item
+\begin{enumerate}[(a)]
+\item What are the socioeconomic, demographic, and geographic patterns in the use of social care? 
+\item Is there an association between multimorbidity status and the amount and type of social care use over time? Does this vary by the patterns described in 1(a)?  
+\end{enumerate}
+\item Is there an association in the use of social care services, multimorbidity status and unscheduled health care use?
+\end{enumerate}
+
+## Background
+
+###Study period 2011-2016
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/linkage_diagram.png}
+
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/02_age_sex_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[height=0.9\textheight, keepaspectratio]{images/05_simd_la.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/12_meds_age_count_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/11_meds_simd_count_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/08_pis_group_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/17_age_sex_scs_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/18_age_simd_scs_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/20_age_meds_scs_plot.png}
+
+## Modelling
+
+\begin{wideitemize}
+\item Logistic regression model applied to each separate year of data
+\item Model applied to subsets of individuals with similar linkage rates to population spine
+\item Effects reported as Average Partial Effects (APEs)
+\item Indicate the marginal effect of each variable on outcome
+\end{wideitemize}
+
+###Regression code
+
+`glm(social_care ~ sex*age_grp + simd*meds_grp + age_grp*meds_grp + council*simd, family = binomial())`
+
+## Results - Modelling
+
+\includegraphics[width=0.95\textwidth, height = 0.85\textheight, keepaspectratio]{images/sc_model_23_AME_plot.png}
+
+## Results - Modelling
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/sc_model_23_AME_time.png}
+
+## Results - Modelling
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/sc_model_23_AMELA_time.png}
+
+##Limitations
+
+\begin{wideitemize}
+\item No measure to capture those living alone
+\item Variation in linkage rate of SCS to population spine at the local authority level
+\item No longitudinal analysis here
+\item Untested multimorbidity measure
+\end{wideitemize}
+
+##Implications
+
+\begin{wideitemize}
+\item Age has the biggest effect on receipt of social care - Multimorbidity also important
+\item Females also more likely to receive care, but a lot of the difference seen in overall numbers is accounted for when adjusting for age and multimorbidity
+\item After adjusting for age and multimorbidity status, there remains variation in levels of care at the local authority level. Further investigation is warranted.
+\item Again, deprivation is shown to to be a driver of service use. The difference in effect between decile 1 and decile 10 is of similar magnitude to the difference between age groups 65-69 and 75-79
+\end{wideitemize}
+
+
+

@@ -1,0 +1,98 @@
+---
+title: "Health and social care data linkage"
+subtitle: "An overview of resources used during my PhD"
+author: "David Henderson"
+date: "7th February 2019"
+output:
+  beamer_presentation:
+    includes:
+      in_header: my_styles.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Project funding and supervision
+
+\vspace{1cm}
+
+\begin{wideitemize}
+\item Scottish Government/ESRC
+\item Nick Bailey, Colin McCowan, Stewart Mercer
+\item Based in UBDC at Glasgow University
+\item Shortly starting post-doc with ADRC-S/Edinburgh Napier
+\end{wideitemize}
+
+\hspace*{8cm}\includegraphics[width = 2cm]{images/ubdc_logo.png}
+
+
+## Background
+
+\includegraphics[width=0.8\textwidth, height=0.8\textheight, keepaspectratio]{images/3MT_plot.png}
+
+## Aims
+
+\begin{wideitemize}
+\item Scope what administrative social care data is available for research in Scotland
+\item Create a linked health and social care dataset
+\item Assess the effect of multimorbidity and sociodemographic characteristics on social care use
+\end{wideitemize}
+
+## Data
+
+\begin{wideitemize}
+\item Social Care Survey
+\item Renfrewshire council social care data (not linked)
+\end{wideitemize}
+
+##Linkage project
+###Study period 2011-2016
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/linkage_diagram.png}
+
+
+##Results - Descriptive statistics
+
+\includegraphics[height=0.9\textheight, keepaspectratio]{images/05_simd_la.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/12_meds_age_count_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/11_meds_simd_count_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/17_age_sex_scs_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/18_age_simd_scs_plot.png}
+
+##Results - Descriptive statistics
+
+\includegraphics[width=0.95\textwidth, keepaspectratio]{images/20_age_meds_scs_plot.png}
+
+##Limitations
+
+\begin{wideitemize}
+\item No measure to capture those living alone
+\item Variation in linkage rate of SCS to population spine at the local authority level
+\item No longitudinal analysis here
+\item Proxy multimorbidity measure
+\end{wideitemize}
+
+##Implications
+
+\begin{wideitemize}
+\item Age has the biggest effect on receipt of social care - Multimorbidity also important
+\item Females also more likely to receive care, but a lot of the difference seen in overall numbers is accounted for when adjusting for age and multimorbidity
+\item After adjusting for age and multimorbidity status, there remains variation in levels of care at the local authority level. Further investigation is warranted.
+\end{wideitemize}
+
+
+
